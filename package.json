@@ -1,0 +1,27 @@
+{
+  "name": "tree-sitter-z80n",
+  "version": "0.0.1",
+  "description": "Parser for z80n (sjasmplus) assembly language",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/varmfskii/tree-sitter-z80n.git"
+  },
+  "keywords": [
+    "atom",
+    "tree-sitter",
+    "z80n",
+    "ZX",
+    "Spectrum",
+    "Next"
+  ],
+  "author": "Theodore (Alex)",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/varmfskii/tree-sitter-z80n/issues"
+  },
+  "homepage": "https://github.com/varmfskii/tree-sitter-z80n#readme"
+}
