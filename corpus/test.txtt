@@ -1,0 +1,17 @@
+=====
+Test name
+=====
+
+:start
+label1
+:if:cond
+:foo
+label2:elseif
+:baz
+:else
+:bar
+:endif
+
+---
+
+(program)

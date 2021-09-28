@@ -2,7 +2,7 @@
   "name": "tree-sitter-z80n",
   "version": "0.0.1",
   "description": "Parser for z80n (sjasmplus) assembly language",
-  "main": "index.js",
+  "main": "bindings/node",
   "scripts": {
     "test": "test"
   },
