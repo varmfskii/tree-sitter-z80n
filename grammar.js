@@ -54,6 +54,22 @@ module.exports = grammar ({
 	    prec(2, $.user_op)
 	),
 
+	z80_op: $ => choice(/ad[cd]/, 'and', 'bit', 'call', 'ccf',
+			    /cp([di]r?)?/, 'cpl', 'daa', 'dec', /[de]i/,
+			    'djnz', /exx?/, 'halt', 'im', /in([di]r?)?/,
+			    /j[pr]/, /ld([di]r?)?/, 'neg', 'nop', 'or',
+			    /ot[di]r/, /out[di]?/, 'pop', 'push', 'res',
+			    /ret[in]?/, /r[lr](d|ca?)/, /s[lr]a/, 'srl',
+			    'sub', 'xor', 'sl1'),
+
+
+	z80n_op: $ => (/ld[di]r?x/, 'ldws', 'ldpirx', 'outinb', 'mul',
+		       'swapinb', 'mirror', 'nextreg', /pixel(ad|dn)/,
+		       'setae', 'test', /bs[lr]a/, 'bsrf', 'brlc', /l[idp]rx/,
+		       'swap', 'nreg', /px(dn|ad)/, 'stae'),
+
+	user_op: $ => /\w+/,
+
 	if_block: $ => seq(
 	    $.if_line,
 	    $.block,
@@ -102,13 +118,6 @@ module.exports = grammar ({
 
 	elseif_op: $ => 'elseif',
 	
-	endif_op: $ => 'endif',
-	
-	z80_op: $ => 'ld',
-
-	z80n_op: $ => 'mul',
-
-	user_op: $ => /\w+/,
-	
+	endif_op: $ => 'endif'
     }	    
 });

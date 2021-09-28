@@ -2,15 +2,15 @@
 Test name
 =====
 
-:start
+ start
 label1
-:if:cond
-:foo
-label2:elseif
-:baz
-:else
-:bar
-:endif
+ if cond
+ foo
+label2 elseif
+ baz
+ else
+ bar
+ endif
 
 ---
 
